@@ -12,7 +12,7 @@ by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/)
 
 ## Usage
 
-To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3 (python2).
+To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3.1 (python2). If you have Tesla V100, you can change a few codes to run with higher pytorch version.
 ```
 python train_search.py \\
 ```
