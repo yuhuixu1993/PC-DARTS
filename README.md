@@ -4,4 +4,37 @@ by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/)
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
 
-## Highlights of PC-DARTS
+**Our approach is memory efficient:(i) increase batch-size to further accelerate the search on CIFAR10, (ii) directly search on ImageNet.**
+
+**Searched on ImageNet, we achieved currently one of, if not only, the best performance on ImageNet (24.2%/7.3%) under the mobile setting!**
+
+**The search process in CIFAR10 only requires 0.1 GPU-days, *i.e.*, ~3 hours on one Nvidia 1080ti.(1.5 hours on one Tesla V100)**
+
+## Usage
+
+To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3 (python2).
+```
+python train_search.py \\
+```
+#### The evaluation process simply follows that of DARTS.
+
+###### Here is the evaluation on CIFAR10/100:
+
+```
+python train_cifar.py \\
+       --auxiliary \\
+       --cutout \\
+```
+
+###### Here is the evaluation on ImageNet (mobile setting):
+```
+python train_imagenet.py \\
+       --tmp_data_dir /path/to/your/data \\
+       --save log_path \\
+       --auxiliary \\
+       --note note_of_this_run
+```
+We will provide pre-trained models of the discovered architecture on CIFAR10 and ImageNet soon!.
+## Reference
+
+If you use our code in your research, please cite our paper accordingly.
