@@ -9,7 +9,11 @@ by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/)
 **Searched on ImageNet, we achieved currently one of, if not only, the best performance on ImageNet (24.2%/7.3%) under the mobile setting!**
 
 **The search process in CIFAR10 only requires 0.1 GPU-days, *i.e.*, ~3 hours on one Nvidia 1080ti.(1.5 hours on one Tesla V100)**
-
+## Results
+#### Results on CIFAR10 and CIFAR100
+![Table_CIFAR](https://github.com/yuhuixu1993/PC-DARTS/blob/master/cifar.png)
+#### Results on ImageNet
+![Table_ImageNet](https://github.com/yuhuixu1993/PC-DARTS/blob/master/imagenet.png)
 ## Usage
 
 To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3.1 (python2). (Tesla V100 will be faster).
