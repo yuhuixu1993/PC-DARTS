@@ -10,7 +10,7 @@ by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/)
 
 **The search process in CIFAR10 only requires 0.1 GPU-days, *i.e.*, ~3 hours on one Nvidia 1080ti.(1.5 hours on one Tesla V100)**
 ## Results
-#### Results on CIFAR10 and CIFAR100
+#### Results on CIFAR10
 ![Table_CIFAR](https://github.com/yuhuixu1993/PC-DARTS/blob/master/cifar.png)
 #### Results on ImageNet
 ![Table_ImageNet](https://github.com/yuhuixu1993/PC-DARTS/blob/master/imagenet.png)
