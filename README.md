@@ -4,7 +4,7 @@ by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/)
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
 
-**Our approach is memory efficient:(i) increase batch-size to further accelerate the search on CIFAR10, (ii) directly search on ImageNet.**
+**Our approach is memory efficient:(i) batch-size is increased to further accelerate the search on CIFAR10, (ii) directly search on ImageNet.**
 
 **Searched on ImageNet, we achieved currently one of, if not only, the best performance on ImageNet (24.2%/7.3%) under the mobile setting!**
 
