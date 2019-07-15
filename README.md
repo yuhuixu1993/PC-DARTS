@@ -44,3 +44,10 @@ We will provide pre-trained models of the discovered architecture on CIFAR10 and
 ## Reference
 
 If you use our code in your research, please cite our paper accordingly.
+```Latex
+@article{xu2019pcdarts,
+  title={Partial Channel Connections for Memory-Efficient Differentiable Architecture Search},
+  author={Xu, Yuhui and Xie, Lingxi and Zhang, Xiaopeng and Chen, Xin and Qi, Guo-Jun and Tian, Qi and Xiong, Hongkai},
+  journal={arXiv preprint arXiv:1907.05737},
+  year={2019}
+}
