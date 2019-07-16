@@ -16,7 +16,7 @@ To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3
 ```
 python train_search.py \\
 ```
-You can search on the imagenet by using model_search_imagenet.py! The main file for search on imagenet will be uploaded after it is cleaned or you can generate it according to the train_search file on CIFAR10 and the evluate file on ImageNet! Hyperparameters are reported in our paper!
+You can search on the imagenet by using model_search_imagenet.py! The training file for search on imagenet will be uploaded after it is cleaned or you can generate it according to the train_search file on CIFAR10 and the evluate file on ImageNet. Hyperparameters are reported in our paper!
 
 #### The evaluation process simply follows that of DARTS.
 
