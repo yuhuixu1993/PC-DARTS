@@ -10,12 +10,23 @@
 
 ## Results
 ### Results on CIFAR10
-Method | Params(M) | Error(%)| Search-Cost(GPU-days)
+Method | Params(M) | Error(%)| Search-Cost
 --- | --- | --- | ---
+AmoebaNet-B|2.8|2.55|3150
 DARTSV1 | 3.3 | 3.00 | 0.4
 DARTSV2 | 3.3 | 2.76 | 1.0
+SNAS    | 2.8 | 2.85 |1.5
 PC-DARTS | 3.6 | **2.57** | **0.1**
+
 ### Results on ImageNet
+Method | Flops |Top-1 Error(%)|Top-5 Error(%)| Search-Cost
+--- | --- | --- | --- | ---
+NASNet-A |564|26.0|8.4|1800
+AmoebaNet-B|570|24.3|7.6|3150
+PNAS     |588 |25.8 |8.1|225
+DARTSV2 | 574 | 26.7 | 8.7 | 1.0
+SNAS    | 522 | 27.3 | 9.3 |1.5
+PC-DARTS | 597 | **24.2** | **7.3** | 3.8
 
 ## Usage
 
