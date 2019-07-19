@@ -1,7 +1,10 @@
 ## Introduction
-**PC-DARTS**is a new developed memory-efficient differentiable architecture method based on **DARTS**. It mainly focuses on the large memory cost of the super-net in one-shot NAS method, which means that it can also be combined with other one-shot NAS method e.g. **ENAS**. Different from previous methods that sampling operations, PC-DARTS samples channel of the constructed super-net. For a detailed description of technical details and experimental results, please refer to our paper:
+
+**PC-DARTS** is a new developed memory-efficient differentiable architecture method based on **DARTS**. It mainly focuses on the large memory cost of the super-net in one-shot NAS method, which means that it can also be combined with other one-shot NAS method e.g. **ENAS**. Different from previous methods that sampling operations, PC-DARTS samples channel of the constructed super-net. For a detailed description of technical details and experimental results, please refer to our paper:
+
 [Partial Channel Connections for Memory-Efficient Differentiable Architecture Search](https://arxiv.org/pdf/1907.05737.pdf)
-by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/), [Xiaopeng Zhang](https://sites.google.com/site/zxphistory/), Xin Chen, [Gu-Jun Qi](http://www.eecs.ucf.edu/~gqi/), [Qi Tian](https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=zh-CN) and Hongkai Xiong.
+
+[Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/), [Xiaopeng Zhang](https://sites.google.com/site/zxphistory/), Xin Chen, [Gu-Jun Qi](http://www.eecs.ucf.edu/~gqi/), [Qi Tian](https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=zh-CN) and Hongkai Xiong.
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
 
