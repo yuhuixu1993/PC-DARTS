@@ -32,7 +32,7 @@ PC-DARTS | 597 | **24.2** | **7.3** | 3.8
 Search a good arcitecture on ImageNet by using the search space of DARTS(**First Time!**).
 ## Usage
 
-To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3.1 (python2). (Tesla V100 will be faster).
+To run our code, you only need one Nvidia 1080ti(11G memory).
 ```
 python train_search.py \\
 ```
@@ -60,6 +60,8 @@ Coming soon!.
 
 ## Notes
 - For the codes in the main branch, `python2 with pytorch(3.0.1)` is recommended for the implement on `Nvidia 1080ti`. We also provided codes in the `V100_pytorch1.0` if you want to implement PC-DARTS on `Tesla V100` with `python3+` and `pytorch1.0+`.
+
+- You can even run the codes on a GPU with memory only **4G**. PC-DARTS only costs less than 4G memory, if we use the same hyper-parameter settings as DARTS(batch-size=64).
 
 - You can search on ImageNet by `model_search_imagenet.py`! The training file for search on ImageNet will be uploaded after it is cleaned or you can generate it according to the train_search file on CIFAR10 and the evluate file on ImageNet. Hyperparameters are reported in our paper!
 
