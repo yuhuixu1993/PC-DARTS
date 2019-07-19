@@ -59,9 +59,13 @@ python train_imagenet.py \\
 Coming soon!.
 
 ## Notes
-- For current mainly file, `python2 with pytorch(3.0.1)` is recommended for the implement on `Nvidia 1080ti`. We also provided codes in the `V100_pytorch1.0` if you want to implement PC-DARTS on `Tesla V100` with `python3+` and `pytorch1.0+`.
+- For the codes in the main branch, `python2 with pytorch(3.0.1)` is recommended for the implement on `Nvidia 1080ti`. We also provided codes in the `V100_pytorch1.0` if you want to implement PC-DARTS on `Tesla V100` with `python3+` and `pytorch1.0+`.
 
 - You can search on ImageNet by `model_search_imagenet.py`! The training file for search on ImageNet will be uploaded after it is cleaned or you can generate it according to the train_search file on CIFAR10 and the evluate file on ImageNet. Hyperparameters are reported in our paper!
+
+- The main codes of PC-DARTS are in the file `model_search.py`. As descriped in the paper, we use an efficient way to implement the channel sampling. First, a fixed sub-set of the input is selected to be fed into the candidate operations, then the concated output is swaped. Two efficient swap operations are provided: channel-shuffle and channel-shift. For the edge normalization, we define edge parameters(beta in our codes) along with the alpha parameters in the original darts codes.
+
+- As PC-DARTS is an ultra memory-efficient NAS methods. It has potentials to be implemnted on other tasks such as detection and segmentation.
 
 ## Reference
 
