@@ -18,8 +18,9 @@ DARTSV2 | 3.3 | 2.76 | 1.0
 SNAS    | 2.8 | 2.85 |1.5
 PC-DARTS | 3.6 | **2.57** | **0.1**
 
+Only **0.1 Gpu-days** is used for a search on CIFAR-10!
 ### Results on ImageNet
-Method | Flops |Top-1 Error(%)|Top-5 Error(%)| Search-Cost
+Method | FLOPs |Top-1 Error(%)|Top-5 Error(%)| Search-Cost
 --- | --- | --- | --- | ---
 NASNet-A |564|26.0|8.4|1800
 AmoebaNet-B|570|24.3|7.6|3150
@@ -28,6 +29,7 @@ DARTSV2 | 574 | 26.7 | 8.7 | 1.0
 SNAS    | 522 | 27.3 | 9.3 |1.5
 PC-DARTS | 597 | **24.2** | **7.3** | 3.8
 
+Search a good arcitecture on ImageNet by using the search space of DARTS(**First Time!**).
 ## Usage
 
 To run our code, you only need one Nvidia 1080ti , and equip it with PyTorch 0.3.1 (python2). (Tesla V100 will be faster).
@@ -38,7 +40,7 @@ You can search on ImageNet by using model_search_imagenet.py! The training file 
 
 #### The evaluation process simply follows that of DARTS.
 
-###### Here is the evaluation on CIFAR10/100:
+##### Here is the evaluation on CIFAR10/100:
 
 ```
 python train_cifar.py \\
@@ -46,7 +48,7 @@ python train_cifar.py \\
        --cutout \\
 ```
 
-###### Here is the evaluation on ImageNet (mobile setting):
+##### Here is the evaluation on ImageNet (mobile setting):
 ```
 python train_imagenet.py \\
        --tmp_data_dir /path/to/your/data \\
@@ -54,7 +56,8 @@ python train_imagenet.py \\
        --auxiliary \\
        --note note_of_this_run
 ```
-We will provide pre-trained models of the discovered architecture on CIFAR10 and ImageNet soon!.
+## Pretrained models
+Coming soon!.
 
 
 
