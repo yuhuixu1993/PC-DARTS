@@ -1,6 +1,6 @@
 ## Introduction
 
-**PC-DARTS** is a new developed memory-efficient differentiable architecture method based on **DARTS**. It mainly focuses on the large memory cost of the super-net in one-shot NAS method, which means that it can also be combined with other one-shot NAS method e.g. **ENAS**. Different from previous methods that sampling operations, PC-DARTS samples channel of the constructed super-net. For a detailed description of technical details and experimental results, please refer to our paper:
+**PC-DARTS** is a memory-efficient differentiable architecture method based on **DARTS**. It mainly focuses on the large memory cost of the super-net in one-shot NAS method, which means that it can also be combined with other one-shot NAS method e.g. **ENAS**. Different from previous methods that sampling operations, PC-DARTS samples channel of the constructed super-net. For a detailed description of technical details and experimental results, please refer to our paper:
 
 [Partial Channel Connections for Memory-Efficient Differentiable Architecture Search](https://arxiv.org/pdf/1907.05737.pdf)
 
@@ -8,9 +8,14 @@
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
 
-**Searched on ImageNet, we achieved currently one of, if not only, the best performance on ImageNet (24.2%/7.3%) under the mobile setting!**
-
-**The search process in CIFAR10 only requires 0.1 GPU-days, *i.e.*, ~3 hours on one Nvidia 1080ti.(1.5 hours on one Tesla V100)**
+## Results
+### Results on CIFAR10
+Method | Params(M) | Error(%)| Search-Cost(GPU-days)
+--- | --- | --- | ---
+DARTSV1 | 3.3 | 3.00 | 0.4
+DARTSV2 | 3.3 | 2.76 | 1.0
+PC-DARTS | 3.6 | **2.57** | **0.1**
+### Results on ImageNet
 
 ## Usage
 
@@ -40,10 +45,7 @@ python train_imagenet.py \\
 ```
 We will provide pre-trained models of the discovered architecture on CIFAR10 and ImageNet soon!.
 
-## Results
-#### Results on CIFAR10
 
-#### Results on ImageNet
 
 ## Reference
 
