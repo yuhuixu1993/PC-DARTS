@@ -59,7 +59,7 @@ python train_imagenet.py \\
 Coming soon!.
 
 ## Notes
-- For the codes in the main branch, `python2 with pytorch(3.0.1)` is recommended for running on `Nvidia 1080ti`. We also provided codes in the `V100_pytorch1.0` if you want to implement PC-DARTS on `Tesla V100` with `python3+` and `pytorch1.0+`.
+- For the codes in the main branch, `python2 with pytorch(3.0.1)` is recommended for running on `Nvidia 1080ti`. We also provided codes in the `V100_python1.0` if you want to implement PC-DARTS on `Tesla V100` with `python3+` and `pytorch1.0+`.
 
 - You can even run the codes on a GPU with memory only **4G**. PC-DARTS only costs less than 4G memory, if we use the same hyper-parameter settings as DARTS(batch-size=64).
 
