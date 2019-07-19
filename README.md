@@ -3,7 +3,8 @@
 by [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/), [Xiaopeng Zhang](https://sites.google.com/site/zxphistory/), Xin Chen, [Gu-Jun Qi](http://www.eecs.ucf.edu/~gqi/), [Qi Tian](https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=zh-CN) and Hongkai Xiong.
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
-
+## Framework
+![pipeline](https://github.com/yuhuixu1993/pdarts/blob/master/imagenet/framework.pdf)
 **Our approach is memory efficient:(i) batch-size is increased to further accelerate the search on CIFAR10, (ii) directly search on ImageNet.**
 
 **Searched on ImageNet, we achieved currently one of, if not only, the best performance on ImageNet (24.2%/7.3%) under the mobile setting!**
