@@ -40,9 +40,9 @@ We will provide pre-trained models of the discovered architecture on CIFAR10 and
 
 ## Results
 #### Results on CIFAR10
-![Table_CIFAR](https://github.com/yuhuixu1993/PC-DARTS/blob/master/image/cifar.png)
+
 #### Results on ImageNet
-![Table_ImageNet](https://github.com/yuhuixu1993/PC-DARTS/blob/master/image/imagenet.png)
+
 ## Reference
 
 If you use our code in your research, please cite our paper accordingly.
