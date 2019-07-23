@@ -39,10 +39,10 @@ python train_search.py \\
 
 #### The evaluation process simply follows that of DARTS.
 
-##### Here is the evaluation on CIFAR10/100:
+##### Here is the evaluation on CIFAR10:
 
 ```
-python train_cifar.py \\
+python train.py \\
        --auxiliary \\
        --cutout \\
 ```
