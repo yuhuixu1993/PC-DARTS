@@ -69,7 +69,7 @@ Coming soon!.
 
 - As PC-DARTS is an ultra memory-efficient NAS methods. It has potentials to be implemnted on other tasks such as detection and segmentation.
 
-##Related work
+## Related work
 
 [Progressive Differentiable Architecture Search](https://github.com/chenxin061/pdarts)
 
