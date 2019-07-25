@@ -63,7 +63,7 @@ Coming soon!.
 
 - You can even run the codes on a GPU with memory only **4G**. PC-DARTS only costs less than 4G memory, if we use the same hyper-parameter settings as DARTS(batch-size=64).
 
-- You can search on ImageNet by `model_search_imagenet.py`! The training file for search on ImageNet will be uploaded after it is cleaned or you can generate it according to the train_search file on CIFAR10 and the evluate file on ImageNet. Hyperparameters are reported in our paper!
+- You can search on ImageNet by `model_search_imagenet.py`! The training file for search on ImageNet will be uploaded after it is cleaned or you can generate it according to the train_search file on CIFAR10 and the evluate file on ImageNet. Hyperparameters are reported in our paper! The search cost 11.5 hours on 8 V100 GPUs(16G each). If you have V100(32G) you can further increase the batch-size.  
 
 - The main codes of PC-DARTS are in the file `model_search.py`. As descriped in the paper, we use an efficient way to implement the channel sampling. First, a fixed sub-set of the input is selected to be fed into the candidate operations, then the concated output is swaped. Two efficient swap operations are provided: channel-shuffle and channel-shift. For the edge normalization, we define edge parameters(beta in our codes) along with the alpha parameters in the original darts codes.
 
