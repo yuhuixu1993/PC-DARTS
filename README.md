@@ -7,6 +7,8 @@
 [Yuhui Xu](http://yuhuixu1993.github.io), [Lingxi Xie](http://lingxixie.com/), [Xiaopeng Zhang](https://sites.google.com/site/zxphistory/), Xin Chen, [Guo-Jun Qi](http://www.eecs.ucf.edu/~gqi/), [Qi Tian](https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=zh-CN) and Hongkai Xiong.
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
+## Updates
+The implementation of random sampling is also uploaded for your consideration.
 
 ## Results
 ### Results on CIFAR10
