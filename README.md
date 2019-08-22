@@ -75,7 +75,9 @@ Coming soon!.
       input_search, target_search = next(valid_queue_iter)
 ```
 
-- The main codes of PC-DARTS are in the file `model_search.py`. As descriped in the paper, we use an efficient way to implement the channel sampling. First, a fixed sub-set of the input is selected to be fed into the candidate operations, then the concated output is swaped. Two efficient swap operations are provided: channel-shuffle and channel-shift. For the edge normalization, we define edge parameters(beta in our codes) along with the alpha parameters in the original darts codes.
+- The main codes of PC-DARTS are in the file `model_search.py`. As descriped in the paper, we use an efficient way to implement the channel sampling. First, a fixed sub-set of the input is selected to be fed into the candidate operations, then the concated output is swaped. Two efficient swap operations are provided: channel-shuffle and channel-shift. For the edge normalization, we define edge parameters(beta in our codes) along with the alpha parameters in the original darts codes. 
+
+- The implementation of random sampling is also provided `model_search_random.py`. It also works while channel-shuffle may have better performance.
 
 - As PC-DARTS is an ultra memory-efficient NAS methods. It has potentials to be implemnted on other tasks such as detection and segmentation.
 
