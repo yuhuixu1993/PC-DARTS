@@ -81,7 +81,7 @@ Coming soon!.
 
 - The implementation of random sampling is also provided `model_search_random.py`. It also works while channel-shuffle may have better performance.
 
-- As PC-DARTS is an ultra memory-efficient NAS methods. It has potentials to be implemnted on other tasks such as detection and segmentation.
+- As PC-DARTS is an ultra memory-efficient NAS methods. It has potentials to be implemented on other tasks such as detection and segmentation.
 
 ## Related work
 
