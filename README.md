@@ -43,7 +43,7 @@ python train_search.py \\
 #### Search on ImageNet
 
 Data preparation: 10% and 2.5% images need to be random sampled prior from earch class of trainingset as train and val, respectively. The sampled data is save into `./imagenet_search`.
-Note that data sampling can not use torch.utils.data.sampler.SubsetRandomSampler as imagenet is too large.
+Note that not to use torch.utils.data.sampler.SubsetRandomSampler for data sampling as imagenet is too large.
 ```
 python train_search_imagenet.py \\
        --tmp_data_dir /path/to/your/sampled/data \\
