@@ -9,6 +9,7 @@
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
 ## Updates
 The implementation of random sampling is also uploaded for your consideration.
+The main file for search on ImageNet has been uploaded `train_search_imagenet.py`.
 
 ## Results
 ### Results on CIFAR10
@@ -33,12 +34,21 @@ PC-DARTS | 597 | **24.2** | **7.3** | 3.8
 
 Search a good arcitecture on ImageNet by using the search space of DARTS(**First Time!**).
 ## Usage
+#### Search on CIFAR10
 
 To run our code, you only need one Nvidia 1080ti(11G memory).
 ```
 python train_search.py \\
 ```
+#### Search on ImageNet
 
+data preparation, 10% and 2.5% images need to be random sampled prior from earch class of trainingset as train and val, respectively. The sampled data is save into `./imagenet_search`.
+Note that data sampling can not use torch.utils.data.sampler.SubsetRandomSampler as imagenet is too large.
+```
+python train_search_imagenet.py \\
+       --tmp_data_dir /path/to/your/sampled/data \\
+       --save log_path \\
+```
 #### The evaluation process simply follows that of DARTS.
 
 ##### Here is the evaluation on CIFAR10:
