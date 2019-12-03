@@ -8,8 +8,8 @@
 
 **This code is based on the implementation of  [DARTS](https://github.com/quark0/darts).**
 ## Updates
--The implementation of random sampling is also uploaded for your consideration.
--The main file for search on ImageNet has been uploaded `train_search_imagenet.py`.
+- The implementation of random sampling is also uploaded for your consideration.
+- The main file for search on ImageNet has been uploaded `train_search_imagenet.py`.
 
 ## Results
 ### Results on CIFAR10
