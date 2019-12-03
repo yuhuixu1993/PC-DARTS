@@ -87,7 +87,7 @@ def main():
   optimizer_a = torch.optim.Adam(model.module.arch_parameters(),lr=args.arch_learning_rate,betas=(0.5,0.999),weight_decay=args.arch_weight_decay)
   #data preparation, we random sample 10% and 2.5% from training set(each class) as train and val, respectively.
   #Note that the data sampling can not use torch.utils.data.sampler.SubsetRandomSampler as imagenet is too large.
-  data_dir = os.path.join(args.tmp_data_dir, 'imagenet')
+  data_dir = os.path.join(args.tmp_data_dir, 'imagenet_search')
   traindir = os.path.join(data_dir, 'train')
   validdir = os.path.join(data_dir, 'val')
   normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
