@@ -124,8 +124,8 @@ def main():
     logging.info('epoch %d lr %e', epoch, lr)
     if epoch < 5 and args.batch_size > 256:
             for param_group in optimizer.param_groups:
-                param_group['lr'] = current_lr * (epoch + 1) / 5.0
-            logging.info('Warming-up Epoch: %d, LR: %e', epoch, current_lr * (epoch + 1) / 5.0)    genotype = model.genotype()
+                param_group['lr'] = lr * (epoch + 1) / 5.0
+            logging.info('Warming-up Epoch: %d, LR: %e', epoch, lr * (epoch + 1) / 5.0)    genotype = model.genotype()
     genotype = model.module.genotype()
     logging.info('genotype = %s', genotype)
     arch_param = model.module.arch_parameters()
