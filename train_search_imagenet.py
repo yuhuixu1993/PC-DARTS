@@ -129,9 +129,9 @@ def main():
     genotype = model.module.genotype()
     logging.info('genotype = %s', genotype)
     arch_param = model.module.arch_parameters()
-    print(F.softmax(arch_param[0], dim=-1))
-    print(F.softmax(arch_param[1], dim=-1))
-
+    logging.info(F.softmax(arch_param[0], dim=-1))
+    logging.info(F.softmax(arch_param[1], dim=-1))
+    
     # training
     train_acc, train_obj = train(train_queue, valid_queue, model, optimizer, optimizer_a, criterion, lr,epoch)
     logging.info('train_acc %f', train_acc)
