@@ -21,8 +21,8 @@ from model import NetworkImageNet as Network
 
 parser = argparse.ArgumentParser("training imagenet")
 parser.add_argument('--workers', type=int, default=32, help='number of workers to load dataset')
-parser.add_argument('--batch_size', type=int, default=256, help='batch size')
-parser.add_argument('--learning_rate', type=float, default=0.1, help='init learning rate')
+parser.add_argument('--batch_size', type=int, default=1024, help='batch size')
+parser.add_argument('--learning_rate', type=float, default=0.5, help='init learning rate')
 parser.add_argument('--momentum', type=float, default=0.9, help='momentum')
 parser.add_argument('--weight_decay', type=float, default=3e-5, help='weight decay')
 parser.add_argument('--report_freq', type=float, default=100, help='report frequency')
