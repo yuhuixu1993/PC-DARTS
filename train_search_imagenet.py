@@ -148,10 +148,8 @@ def main():
 
     #architect = Architect(model, args)
 
-
     for epoch in range(args.epochs):
         scheduler.step()
-        lr = scheduler.get_lr()[0]
         logging.info('Epoch: %d lr: %e', epoch, lr)
         if epoch < 5 and args.batch_size > 256:
             for param_group in optimizer.param_groups:
