@@ -142,6 +142,7 @@ def main():
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, float(args.epochs))
     best_acc_top1 = 0
     best_acc_top5 = 0
+    lr = args.learning_rate
     for epoch in range(args.epochs):
         if args.lr_scheduler == 'cosine':
             scheduler.step()
@@ -154,8 +155,8 @@ def main():
         logging.info('Epoch: %d lr %e', epoch, current_lr)
         if epoch < 5 and args.batch_size > 256:
             for param_group in optimizer.param_groups:
-                param_group['lr'] = current_lr * (epoch + 1) / 5.0
-            logging.info('Warming-up Epoch: %d, LR: %e', epoch, current_lr * (epoch + 1) / 5.0)
+                param_group['lr'] = lr * (epoch + 1) / 5.0
+            logging.info('Warming-up Epoch: %d, LR: %e', epoch, lr * (epoch + 1) / 5.0)
         if num_gpus > 1:
             model.module.drop_path_prob = args.drop_path_prob * epoch / args.epochs
         else:
