@@ -147,7 +147,7 @@ def main():
             optimizer, float(args.epochs), eta_min=args.learning_rate_min)
 
     #architect = Architect(model, args)
-
+    lr=args.learning_rate
     for epoch in range(args.epochs):
         scheduler.step()
         current_lr = scheduler.get_lr()[0]
