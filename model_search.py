@@ -28,12 +28,11 @@ class MixedOp(nn.Module):
     super(MixedOp, self).__init__()
     self._ops = nn.ModuleList()
     self.mp = nn.MaxPool2d(2,2)
-    k = 4
     self.k = 4
     for primitive in PRIMITIVES:
-      op = OPS[primitive](C //k, stride, False)
+      op = OPS[primitive](C //self.k, stride, False)
       if 'pool' in primitive:
-        op = nn.Sequential(op, nn.BatchNorm2d(C //k, affine=False))
+        op = nn.Sequential(op, nn.BatchNorm2d(C //self.k, affine=False))
       self._ops.append(op)
 
 
