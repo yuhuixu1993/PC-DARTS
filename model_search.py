@@ -28,26 +28,27 @@ class MixedOp(nn.Module):
     super(MixedOp, self).__init__()
     self._ops = nn.ModuleList()
     self.mp = nn.MaxPool2d(2,2)
-
+    k = 4
+    self.k = 4
     for primitive in PRIMITIVES:
-      op = OPS[primitive](C //4, stride, False)
+      op = OPS[primitive](C //k, stride, False)
       if 'pool' in primitive:
-        op = nn.Sequential(op, nn.BatchNorm2d(C //4, affine=False))
+        op = nn.Sequential(op, nn.BatchNorm2d(C //k, affine=False))
       self._ops.append(op)
 
 
   def forward(self, x, weights):
     #channel proportion k=4  
     dim_2 = x.shape[1]
-    xtemp = x[ : , :  dim_2//4, :, :]
-    xtemp2 = x[ : ,  dim_2//4:, :, :]
+    xtemp = x[ : , :  dim_2//self.k, :, :]
+    xtemp2 = x[ : ,  dim_2//self.k:, :, :]
     temp1 = sum(w * op(xtemp) for w, op in zip(weights, self._ops))
     #reduction cell needs pooling before concat
     if temp1.shape[2] == x.shape[2]:
       ans = torch.cat([temp1,xtemp2],dim=1)
     else:
       ans = torch.cat([temp1,self.mp(xtemp2)], dim=1)
-    ans = channel_shuffle(ans,4)
+    ans = channel_shuffle(ans,self.k)
     #ans = torch.cat([ans[ : ,  dim_2//4:, :, :],ans[ : , :  dim_2//4, :, :]],dim=1)
     #except channe shuffle, channel shift also works
     return ans
